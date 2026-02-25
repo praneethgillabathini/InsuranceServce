@@ -1,0 +1,77 @@
+{
+    "bundleType": "InsurancePlan",
+    "organisation": {
+        "name": "",
+        "phone": ""
+    },
+    "tpaOrganisation": {
+        "name": "Name of the Third Party Administrator (TPA), if any",
+        "identifier": "TPA ID or License number"
+    },
+    "insurancePlan": {
+        "status": "active",
+        "name": "Name of the health insurance policy/product",
+        "typeCode": "Use '01' for Hospitalisation Indemnity, '02' for Top-up, '05' for PA",
+        "typeDisplay": "Text description of the typeCode",
+        "periodStart": "Policy start date (YYYY-MM-DD)",
+        "periodEnd": "Policy end date (YYYY-MM-DD)",
+        "coverageArea": [
+            "Array of strings representing geographic validity (e.g., 'India')"
+        ],
+        "networks": [
+            "Array of strings for provider networks (e.g., 'XYZ PPN')"
+        ],
+        "contacts": [
+            {
+                "purpose": "e.g., Claims Helpline, Grievance",
+                "phone": "Phone number"
+            }
+        ],
+        "supportingInfoRequirements": [
+            {
+                "categoryCode": "'POI' (Proof of Identity) or 'POA' (Proof of Address)",
+                "categoryDisplay": "Proof of identity or Proof of address",
+                "documentCode": "e.g., 'ADN' (Aadhaar), 'PAN' (PAN Card)",
+                "documentDisplay": "e.g., Aadhaar number"
+            }
+        ],
+        "exclusions": [
+            {
+                "categoryCode": "'Excl01' (Pre-Existing) or 'Excl02' (Waiting period)",
+                "categoryDisplay": "e.g., Pre-Existing Diseases",
+                "statement": "The exact exclusion rule text from the document"
+            }
+        ],
+        "coverages": [
+            {
+                "typeDisplay": "e.g., Inpatient care, Day Care, Tele Consultation",
+                "condition": "Any specific condition or prerequisite for this coverage",
+                "benefits": [
+                    {
+                        "typeCode": "SNOMED/Terminology code if known, else leave empty",
+                        "typeDisplay": "Name of the specific benefit (e.g., Room Rent, ICU, Doctor Consultation)",
+                        "limitValue": "Numeric cap/limit (e.g., 5000)",
+                        "limitUnit": "e.g., INR, Days, Percentage"
+                    }
+                ]
+            }
+        ],
+        "plans": [
+            {
+                "planTypeCode": "'01' (Individual) or '02' (Family Floater)",
+                "planTypeDisplay": "Individual or Family Floater",
+                "specificCosts": [
+                    {
+                        "categoryCode": "e.g., 49122002", 
+                        "categoryDisplay": "e.g., Ambulance", 
+                        "benefitTypeCode": "e.g., 49122002", 
+                        "benefitTypeDisplay": "e.g., Ambulance", 
+                        "costType": "'fullcoverage', 'copay', or 'deductible'", 
+                        "costValue": "Numeric cost or percentage", 
+                        "costUnit": "INR or %"
+                    }
+                ]
+            }
+        ]
+    }
+}

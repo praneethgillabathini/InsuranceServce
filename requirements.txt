@@ -2,4 +2,13 @@ marker-pdf
 torch
 transformers
 pdf2image
-marker
+uvicorn
+fastapi
+python-multipart
+openai
+google-generativeai
+boto3
+groq
+pydantic-settings
+PyYAML
+python-dotenv

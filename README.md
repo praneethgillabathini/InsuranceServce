@@ -32,8 +32,8 @@ The application follows a decoupled client-server architecture, ensuring scalabi
 ## Technology Stack
 
 | Component | Technology                                |
-| :--- |:------------------------------------------|
-| **Frontend** | React, Axios                              |
+| :--- | :---------------------------------------- |
+| **Frontend** | React, Material-UI, Fetch API             |
 | **Backend** | Python, FastAPI                           |
 | **PDF Parsing** | `Marker`, `pdfplumber`                    |
 | **FHIR Handling** | `fhir.resources`                          |
@@ -52,16 +52,14 @@ Ensure you have the following installed on your local development machine:
 Follow these steps to get the project running locally.
 
 ### Backend Setup
-
 ```bash
-# 1. Navigate to the backend directory
-cd path/to/your/backend
+# From the project root directory (e.g., C:/PROGRAMS/hackathon/InsuranceService/)
 
-# 2. Create and activate a Python virtual environment
+# 1. Create and activate a Python virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
-# 3. Install the required Python packages
+# 2. Install the required Python packages
 pip install -r requirements.txt
 ```
 
@@ -79,10 +77,10 @@ npm install
 
 1.  **Start the Backend Server**:
     ```bash
-    # From the backend directory
-    python app.py
+    # From the project's root directory (C:/PROGRAMS/hackathon/InsuranceService/)
+    uvicorn src.app:app --reload
     ```
-    The backend will typically be available at `http://localhost:5000`.
+    The backend will be available at `http://localhost:8000`.
 
 2.  **Start the Frontend Application**:
     ```bash
