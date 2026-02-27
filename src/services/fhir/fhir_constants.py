@@ -1,25 +1,32 @@
-# FHIR Resource Types
 BUNDLE = "Bundle"
 ORGANIZATION = "Organization"
 INSURANCE_PLAN = "InsurancePlan"
 
-# Bundle Types
 BUNDLE_TYPE_COLLECTION = "collection"
-
-# Telecom Systems
+LANGUAGE_EN_IN = "en-IN"
 TELECOM_SYSTEM_PHONE = "phone"
+TELECOM_SYSTEM_EMAIL = "email"
+TELECOM_SYSTEM_URL = "url"
+IDENTIFIER_USE_OFFICIAL = "official"
+SYS_IDENTIFIER = "http://code.workz.com"
+SYS_IRDAI_IDENTIFIER = "https://www.irdai.gov.in/identifier/tpa"
+SYS_INSURER_IDENTIFIER = "https://www.irdai.gov.in/identifier/insurer"
+CONTACT_PURPOSE_SYSTEM = "http://terminology.hl7.org/CodeSystem/contactentity-type"
+SYS_SNOMED = "http://snomed.info/sct"
 
-# ABDM (Ayushman Bharat Digital Mission) URLs
-_ABDM_URL_BASE = "https://nrces.in/ndhm/fhir/r4"
+_ABDM_BASE = "https://nrces.in/ndhm/fhir/r4"
 
-# ABDM Structure Definitions
-SD_CLAIM_SUPPORTING_INFO_REQ = f"{_ABDM_URL_BASE}/StructureDefinition/Claim-SupportingInfoRequirement"
-SD_CLAIM_EXCLUSION = f"{_ABDM_URL_BASE}/StructureDefinition/Claim-Exclusion"
-SD_CLAIM_CONDITION = f"{_ABDM_URL_BASE}/StructureDefinition/Claim-Condition"
+VS_INSURANCE_PLAN_TYPE = f"{_ABDM_BASE}/ValueSet/ndhm-insuranceplan-type"
+VS_PLAN_TYPE = f"{_ABDM_BASE}/ValueSet/ndhm-plan-type"
+VS_COST_APPLICABILITY = "http://hl7.org/fhir/ValueSet/insuranceplan-applicability"
+APPLICABILITY_IN_NETWORK = "in-network"
+APPLICABILITY_OUT_OF_NETWORK = "out-of-network"
+APPLICABILITY_OTHER = "other"
 
-# ABDM ValueSets
-VS_INSURANCE_PLAN_TYPE = f"{_ABDM_URL_BASE}/ValueSet/ndhm-insuranceplan-type"
-VS_PLAN_TYPE = f"{_ABDM_URL_BASE}/ValueSet/ndhm-plan-type"
+EXT_SUPPORTING_INFO_REQ = f"{_ABDM_BASE}/StructureDefinition/Claim-SupportingInfoRequirement"
+EXT_EXCLUSION = f"{_ABDM_BASE}/StructureDefinition/Claim-Exclusion"
+EXT_CONDITION = f"{_ABDM_BASE}/StructureDefinition/Claim-Condition"
+EXT_NETWORK = f"{_ABDM_BASE}/StructureDefinition/InsurancePlan-Network"
 
-# Placeholder/Example Systems
-SYSTEM_EXAMPLE_IDENTIFIER = "http://example.org/identifiers"
+META_PROFILE_INSURANCE_PLAN = f"{_ABDM_BASE}/StructureDefinition/InsurancePlan"
+META_PROFILE_ORGANIZATION = f"{_ABDM_BASE}/StructureDefinition/Organization"
