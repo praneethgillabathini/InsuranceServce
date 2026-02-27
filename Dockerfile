@@ -33,6 +33,6 @@ COPY --from=builder /install /usr/local
 
 COPY . /app/
 
-EXPOSE 8002
+EXPOSE 8080
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8002"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
