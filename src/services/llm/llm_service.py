@@ -6,7 +6,7 @@ from google.genai import types
 import boto3
 import json
 import asyncio
-import grpc
+
 from src import constants
 from src.config import settings
 import logging
