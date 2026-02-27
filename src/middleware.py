@@ -14,10 +14,8 @@ class LoggingMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next: RequestResponseEndpoint) -> Response:
         request_id = str(uuid.uuid4())
         request_id_var.set(request_id)
-
         start_time = time.time()
         logger.info(constants.LOG_REQUEST_STARTED.format(method=request.method, path=request.url.path))
-
         try:
             response = await call_next(request)
             process_time = time.time() - start_time

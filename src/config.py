@@ -3,7 +3,8 @@ import sys
 from pathlib import Path
 from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from typing import Literal, Dict, Any
+from typing import Literal, Dict, Any, List
+
 from . import constants
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -12,26 +13,28 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 class OpenAISettings(BaseModel):
     model_name: str
 
+
 class OllamaSettings(BaseModel):
     base_url: str
     model_name: str
 
+
 class GeminiSettings(BaseModel):
     model_name: str
 
+
 class GrokSettings(BaseModel):
+    base_url: str = "https://api.groq.com/openai/v1"
     model_name: str
+
 
 class BedrockSettings(BaseModel):
     region_name: str
     model_id: str
+    anthropic_version: str = "bedrock-2023-05-31"
+    max_tokens: int = 4096
+    temperature: float = 0.0
 
-class MarkerSettings(BaseModel):
-    workers: int = 1
-    pdftext_workers: int = 1
-    batch_multiplier: int = 1
-    model_precision: Literal["fp32", "fp16"] = "fp32"
-    exclude_images: bool = True
 
 class LLMSettings(BaseModel):
     provider: Literal[*constants.LLM_PROVIDERS]
@@ -40,6 +43,42 @@ class LLMSettings(BaseModel):
     gemini: GeminiSettings
     grok: GrokSettings
     bedrock: BedrockSettings
+
+
+class MarkerSettings(BaseModel):
+    workers: int = 1
+    pdftext_workers: int = 1
+    batch_multiplier: int = 1
+    model_precision: Literal["fp32", "fp16"] = "fp32"
+    exclude_images: bool = True
+
+
+class PDFProcessorSettings(BaseModel):
+    text_coverage_threshold: float = 0.85
+    min_chars_for_text_pdf: int = 200
+    disable_links: bool = True
+    disable_multicolumn_detection: bool = True
+
+
+class PolicyPrunerSettings(BaseModel):
+    junk_keywords: List[str] = []
+
+
+class AppSettings(BaseModel):
+    title: str = "NHCX Insurance FHIR Utility API"
+    description: str = "An API to convert insurance claim PDFs into NHCX compliant FHIR bundles."
+    version: str = "1.0.0"
+    api_prefix: str = "/api/v1"
+
+
+class ServerSettings(BaseModel):
+    host: str = "0.0.0.0"
+    port: int = 8000
+
+
+class LoggingSettings(BaseModel):
+    level: str = "INFO"
+    uvicorn_access_level: str = "WARNING"
 
 
 class Settings(BaseSettings):
@@ -51,10 +90,13 @@ class Settings(BaseSettings):
         extra='ignore'
     )
 
-
+    app: AppSettings = AppSettings()
+    server: ServerSettings = ServerSettings()
+    logging: LoggingSettings = LoggingSettings()
     llm: LLMSettings
     marker: MarkerSettings
-
+    pdf_processor: PDFProcessorSettings = PDFProcessorSettings()
+    policy_pruner: PolicyPrunerSettings = PolicyPrunerSettings()
 
     openai_api_key: str = Field("not-set", alias="OPENAI_API_KEY")
     google_api_key: str = Field("not-set", alias="GOOGLE_API_KEY")
