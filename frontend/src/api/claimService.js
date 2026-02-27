@@ -1,5 +1,6 @@
-const BASE_INSURANCE = '/api/v1/insurance';
-const BASE_FHIR = '/api/v1/fhir';
+const API_URL = process.env.REACT_APP_API_URL || '';
+const BASE_INSURANCE = `${API_URL}/api/v1/insurance`;
+const BASE_FHIR = `${API_URL}/api/v1/fhir`;
 
 async function _handleResponse(response) {
   const data = await response.json();
