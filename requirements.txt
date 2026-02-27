@@ -1,4 +1,5 @@
 marker-pdf
+pdftext
 torch
 transformers
 pdf2image
@@ -12,3 +13,4 @@ groq
 pydantic-settings
 PyYAML
 python-dotenv
+fhir

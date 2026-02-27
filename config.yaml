@@ -1,3 +1,17 @@
+app:
+  title: "NHCX Insurance FHIR Utility API"
+  description: "An API to convert insurance claim PDFs into NHCX compliant FHIR bundles."
+  version: "1.0.0"
+  api_prefix: "/api/v1"
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+
+logging:
+  level: "INFO"
+  uvicorn_access_level: "WARNING"
+
 llm:
   provider: "gemini" # The default LLM provider. Can be "openai", "ollama", "gemini", "grok", or "bedrock".
 
@@ -9,18 +23,53 @@ llm:
     model_name: "llama3.1"
 
   gemini:
-    model_name: "gemini-2.5-flash"
+    model_name: "gemini-3-flash"
 
   grok:
+    base_url: "https://api.groq.com/openai/v1"
     model_name: "llama3-70b-8192"
 
   bedrock:
     region_name: "us-east-2"
     model_id: "global.amazon.nova-2-lite-v1:0"
+    anthropic_version: "bedrock-2023-05-31"
+    max_tokens: 4096
+    temperature: 0.0
 
 marker:
-  workers: 4 # Increased for better CPU utilization
+  workers: 2
   pdftext_workers: 2
-  batch_multiplier: 4 # New: Controls how many pages are processed in parallel
-  model_precision: "fp16" # New: Use "fp16" for speed on GPU, or "fp32" for max precision
-  exclude_images: true # New: Set to true to skip image and table detection for faster processing
+  batch_multiplier: 2
+  model_precision: "fp16"   # fp16 on GPU (fast); silently fp32 on CPU
+  exclude_images: true      # skip image/table models — saves ~40 % time
+
+pdf_processor:
+  text_coverage_threshold: 0.85
+  min_chars_for_text_pdf: 200
+  disable_links: true
+  disable_multicolumn_detection: true  # insurance PDFs rarely need this
+
+policy_pruner:
+  # Section headers matching any of these keywords will be stripped from the
+  # extracted markdown before sending to the LLM (reduces token usage).
+  junk_keywords:
+    - "table of contents"
+    - "preamble"
+    - "introduction"
+    - "glossary"
+    - "definition"
+    - "annexure"
+    - "appendix"
+    - "appendices"
+    - "cancellation"
+    - "arbitration"
+    - "fraud"
+    - "free look"
+    - "renewal"
+    - "portability"
+    - "migration"
+    - "withdrawal"
+    - "moratorium"
+    - "nomination"
+    - "assignment"
+    - "redressal"
