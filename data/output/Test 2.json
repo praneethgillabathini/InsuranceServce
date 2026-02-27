@@ -1,15 +1,20 @@
 {
   "resourceType": "Bundle",
-  "id": "ae6c684f-2471-46a9-860b-b406b100cd5b",
+  "id": "7e904707-4de8-4d8b-aaea-0d38f30a7b98",
+  "meta": {
+    "profile": [
+      "https://nrces.in/ndhm/fhir/r4/StructureDefinition/DocumentBundle"
+    ]
+  },
   "language": "en-IN",
   "type": "collection",
-  "timestamp": "2026-02-27T22:08:41.462319Z",
+  "timestamp": "2026-02-27T23:07:47.238643Z",
   "entry": [
     {
-      "fullUrl": "urn:uuid:964d2c25-2b47-44da-a67d-85d078f00601",
+      "fullUrl": "urn:uuid:1db1143c-cfa4-4dac-81db-fce888ea4963",
       "resource": {
         "resourceType": "InsurancePlan",
-        "id": "964d2c25-2b47-44da-a67d-85d078f00601",
+        "id": "1db1143c-cfa4-4dac-81db-fce888ea4963",
         "meta": {
           "profile": [
             "https://nrces.in/ndhm/fhir/r4/StructureDefinition/InsurancePlan"
@@ -39,7 +44,8 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Copy of Insured Person's passport (All pages)"
+                      "code": "PP",
+                      "display": "Passport"
                     }
                   ]
                 }
@@ -65,7 +71,8 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Photo Identity proof of the patient"
+                      "code": "ID",
+                      "display": "Photo Identity proof"
                     }
                   ]
                 }
@@ -92,7 +99,7 @@
                   "coding": [
                     {
                       "code": "KYC",
-                      "display": "KYC (Identity proof with Address) of the proposer"
+                      "display": "KYC (Identity proof with Address)"
                     }
                   ]
                 }
@@ -119,13 +126,133 @@
                   "coding": [
                     {
                       "code": "KYC",
-                      "display": "KYC (Identity proof with Address) of the proposer"
+                      "display": "KYC (Identity proof with Address)"
                     }
                   ]
                 }
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-SupportingInfoRequirement"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "Excl",
+                      "display": "Investigation & Evaluation"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Expenses related to any admission primarily for diagnostics and evaluation purposes."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "Excl",
+                      "display": "Investigation & Evaluation"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Any diagnostic expenses which are not related or not incidental to the current diagnosis and treatment."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "Excl",
+                      "display": "Diagnosis not related to COVID"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Any diagnosis which is not related and not incidental to COVID is not covered in this Policy."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "Excl",
+                      "display": "Unauthorized Diagnostic Centre"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Testing done at a Diagnostic centre which is not authorized by the Government shall not be recognized under this Policy."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "Excl02",
+                      "display": "Waiting Period"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Any claim with respect to COVID manifested prior to commencement date of this policy or during the waiting period."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "Excl",
+                      "display": "Travel Restriction"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Cover under this Policy shall cease if the Insured Person travels to any country placed under travel restriction by the Government of India."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
           },
           {
             "extension": [
@@ -146,128 +273,13 @@
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
-          },
-          {
-            "extension": [
-              {
-                "url": "category",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "Excl01",
-                      "display": "Pre-Existing Diseases"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "statement",
-                "valueString": "Any claim with respect to COVID manifested prior to commencement date of this policy or during the waiting period."
-              }
-            ],
-            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
-          },
-          {
-            "extension": [
-              {
-                "url": "category",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "display": "Investigation & Evaluation"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "statement",
-                "valueString": "Expenses related to any admission primarily for diagnostics and evaluation purposes."
-              }
-            ],
-            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
-          },
-          {
-            "extension": [
-              {
-                "url": "category",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "display": "Diagnostic Expenses"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "statement",
-                "valueString": "Any diagnostic expenses which are not related or not incidental to the current diagnosis and treatment."
-              }
-            ],
-            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
-          },
-          {
-            "extension": [
-              {
-                "url": "category",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "display": "Diagnosis not related to COVID"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "statement",
-                "valueString": "Any diagnosis which is not related and not incidental to COVID is not covered in this Policy."
-              }
-            ],
-            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
-          },
-          {
-            "extension": [
-              {
-                "url": "category",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "display": "Unauthorized Testing"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "statement",
-                "valueString": "Testing done at a Diagnostic centre which is not authorized by the Government shall not be recognized under this Policy."
-              }
-            ],
-            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
-          },
-          {
-            "extension": [
-              {
-                "url": "category",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "display": "Travel Restriction"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "statement",
-                "valueString": "Cover under this Policy shall cease if the Insured Person travels to any country placed under travel restriction by the Government of India."
-              }
-            ],
-            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
           }
         ],
         "identifier": [
           {
             "use": "official",
             "system": "http://code.workz.com",
-            "value": "urn:uuid:4d5fcf58-601a-457f-9e10-b9acb930e2c2"
+            "value": "urn:uuid:9cbeed03-c404-4ee9-8491-a177e99ddefb"
           }
         ],
         "status": "active",
@@ -276,8 +288,8 @@
             "coding": [
               {
                 "system": "https://nrces.in/ndhm/fhir/r4/ValueSet/ndhm-insuranceplan-type",
-                "code": "Unknown",
-                "display": "Benefit based"
+                "code": "01",
+                "display": "Hospitalisation Indemnity"
               }
             ]
           }
@@ -285,7 +297,7 @@
         "name": "Corona Rakshak Policy",
         "alias": [],
         "ownedBy": {
-          "reference": "urn:uuid:369b429e-a67a-49b9-9357-cc28dc60423e"
+          "reference": "urn:uuid:ba7ab767-3f0f-4009-acd1-6a66e132981c"
         },
         "coverageArea": [
           {
@@ -334,7 +346,7 @@
             "telecom": [
               {
                 "system": "phone",
-                "value": "1800120216216 / 180012000"
+                "value": "1800120216216"
               },
               {
                 "system": "email",
@@ -355,7 +367,7 @@
             },
             "name": [
               {
-                "text": "Company’s Grievance Redressal Officer"
+                "text": "Grievance Redressal Officer"
               }
             ],
             "telecom": [
@@ -415,7 +427,7 @@
             "telecom": [
               {
                 "system": "phone",
-                "value": "022-26106245/889/671"
+                "value": "022-26106245"
               },
               {
                 "system": "email",
@@ -431,7 +443,7 @@
                 "extension": [
                   {
                     "url": "statement",
-                    "valueString": "Lump sum benefit equal to 100% of the Sum Insured shall be payable on positive diagnosis of COVID, requiring hospitalization for a minimum continuous period of 72 hours. The positive diagnosis of COVID shall be from a government authorized diagnostic centre."
+                    "valueString": "positive diagnosis of COVID, requiring hospitalization for a minimum continuous period of 72 hours. The positive diagnosis of COVID shall be from a government authorized diagnostic centre."
                   }
                 ],
                 "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
@@ -449,7 +461,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Lump sum benefit for COVID hospitalization"
+                      "display": "Lump sum benefit"
                     }
                   ]
                 },
@@ -457,14 +469,14 @@
                   {
                     "value": {
                       "value": 100.0,
-                      "unit": "% of Sum Insured"
+                      "unit": "%"
                     },
                     "code": {
                       "coding": [
                         {
                           "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
                           "code": "benefit",
-                          "display": "100 % of Sum Insured"
+                          "display": "100 %"
                         }
                       ]
                     }
@@ -480,7 +492,7 @@
               {
                 "use": "official",
                 "system": "http://code.workz.com",
-                "value": "urn:uuid:0daa2175-67a3-4da7-bf66-bc905d4688cf"
+                "value": "urn:uuid:f5a35b39-5b90-4451-91f2-bce892186efc"
               }
             ],
             "type": {
@@ -497,10 +509,10 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:369b429e-a67a-49b9-9357-cc28dc60423e",
+      "fullUrl": "urn:uuid:ba7ab767-3f0f-4009-acd1-6a66e132981c",
       "resource": {
         "resourceType": "Organization",
-        "id": "369b429e-a67a-49b9-9357-cc28dc60423e",
+        "id": "ba7ab767-3f0f-4009-acd1-6a66e132981c",
         "meta": {
           "profile": [
             "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
@@ -510,16 +522,16 @@
           {
             "use": "official",
             "system": "https://www.irdai.gov.in/identifier/insurer",
-            "value": "urn:uuid:bfc20e6d-5214-4c93-a1e0-8dfa6f010801"
+            "value": "urn:uuid:2572cba5-9414-422b-8ce2-5be016b73c3b"
           }
         ],
-        "name": "Edelweiss General Insurance Company Ltd",
+        "name": "Edelweiss General Insurance Company Limited",
         "contact": [
           {
             "telecom": [
               {
                 "system": "phone",
-                "value": "1800120216216 / 180012000"
+                "value": "180012000"
               },
               {
                 "system": "email",

@@ -90,6 +90,7 @@ class InsurancePlanFHIRMapper:
         self.data: Dict[str, Any] = extracted_data or {}
         self.bundle = Bundle(
             id=str(uuid.uuid4()),
+            meta=Meta(profile=[fhir_const.META_PROFILE_DOCUMENT_BUNDLE]),
             type=fhir_const.BUNDLE_TYPE_COLLECTION,
             language=fhir_const.LANGUAGE_EN_IN,
             timestamp=datetime.now(timezone.utc),
