@@ -1,73 +1,15 @@
 {
   "resourceType": "Bundle",
-  "id": "d467854d-bd6e-4944-8ecb-83ed0416bd3a",
+  "id": "c2b8cc76-093d-4ce8-bdb2-6c63b3c5e315",
   "language": "en-IN",
   "type": "collection",
-  "timestamp": "2026-02-27T09:33:55.853835Z",
+  "timestamp": "2026-02-27T22:09:24.428768Z",
   "entry": [
     {
-      "fullUrl": "urn:uuid:8ca6832b-b138-4035-8463-471e75372578",
-      "resource": {
-        "resourceType": "Organization",
-        "id": "8ca6832b-b138-4035-8463-471e75372578",
-        "meta": {
-          "profile": [
-            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
-          ]
-        },
-        "identifier": [
-          {
-            "use": "official",
-            "system": "https://www.irdai.gov.in/identifier/insurer",
-            "value": "urn:uuid:2d44c8be-896b-4eba-85b9-8966935e9510"
-          }
-        ],
-        "name": "Aditya Birla Health Insurance Co. Limited",
-        "contact": [
-          {
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "1800 270 7000"
-              },
-              {
-                "system": "email",
-                "value": "care.healthinsurance@adityabirlacapital.com"
-              },
-              {
-                "system": "url",
-                "value": "adityabirlahealthinsurance.com"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:4eb60039-8294-4035-a91e-1f653fc90d20",
-      "resource": {
-        "resourceType": "Organization",
-        "id": "4eb60039-8294-4035-a91e-1f653fc90d20",
-        "meta": {
-          "profile": [
-            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
-          ]
-        },
-        "identifier": [
-          {
-            "use": "official",
-            "system": "https://www.irdai.gov.in/identifier/tpa",
-            "value": "urn:uuid:6510518f-bc48-4d14-ac27-6c1a671f2ac0"
-          }
-        ],
-        "name": "Unknown"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:99be9acf-f489-4cd3-90bf-afd19ece2683",
+      "fullUrl": "urn:uuid:f0ee606d-13d4-49cd-b61d-1ca82fa45fe5",
       "resource": {
         "resourceType": "InsurancePlan",
-        "id": "99be9acf-f489-4cd3-90bf-afd19ece2683",
+        "id": "f0ee606d-13d4-49cd-b61d-1ca82fa45fe5",
         "meta": {
           "profile": [
             "https://nrces.in/ndhm/fhir/r4/StructureDefinition/InsurancePlan"
@@ -112,7 +54,84 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "code": "Excl04",
+                      "code": "POI",
+                      "display": "Proof of Identity"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "document",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Identity proof of Nominee"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-SupportingInfoRequirement"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "POI",
+                      "display": "Proof of Identity"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "document",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Photo Identity Proof of Child"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-SupportingInfoRequirement"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "POI",
+                      "display": "Proof of Identity"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "document",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Age proof of Child"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-SupportingInfoRequirement"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
                       "display": "Investigation & Evaluation"
                     }
                   ]
@@ -120,7 +139,7 @@
               },
               {
                 "url": "statement",
-                "valueString": "Expenses related to any admission primarily for diagnostics and evaluation purposes. Any diagnostic expenses which are not related or not incidental to the current diagnosis and treatment."
+                "valueString": "Expenses related to any admission primarily for diagnostics and evaluation purposes."
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
@@ -132,15 +151,14 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "code": "Excl14",
-                      "display": "Dietary supplements"
+                      "display": "Investigation & Evaluation"
                     }
                   ]
                 }
               },
               {
                 "url": "statement",
-                "valueString": "Dietary supplements and substances that can be purchased without prescription, including but not limited to Vitamins, minerals and organic substances unless prescribed by a medical practitioner as part of hospitalization claim or day care procedure."
+                "valueString": "Any diagnostic expenses which are not related or not incidental to the current diagnosis and treatment."
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
@@ -152,14 +170,14 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Accidental Injuries"
+                      "display": "Dietary supplements and substances"
                     }
                   ]
                 }
               },
               {
                 "url": "statement",
-                "valueString": "Expenses incurred for treatment of accidental injuries which does not warrant hospitalization. Any expenses incurred on Domiciliary Hospitalization and OPD treatment. Treatment taken outside the geographical limits of India (for Hospitalisation Expenses due to Accident cover)."
+                "valueString": "Dietary supplements and substances that can be purchased without prescription, including but not limited to Vitamins, minerals and organic substances unless prescribed by a medical practitioner as part of hospitalization claim or day care procedure"
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
@@ -171,14 +189,14 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Acts of War/Terrorism"
+                      "display": "Treatment not warranting hospitalization"
                     }
                   ]
                 }
               },
               {
                 "url": "statement",
-                "valueString": "Any claim for death or disablement directly or indirectly due to War (whether declared or not) and war like occurrence or invasion, acts of foreign enemies, hostilities, civil war, rebellion, revolutions, insurrections, mutiny, military or usurped power, seizure, capture, arrest, restraints and detainment of all kinds. Nuclear, chemical and biological terrorism, ionizing radiation or contamination by radioactivity."
+                "valueString": "Expenses incurred for treatment of accidental injuries which does not warrant hospitalization."
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
@@ -190,14 +208,14 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Self-Inflicted Injury/Substance Abuse/Illegal Acts"
+                      "display": "Domiciliary Hospitalization and OPD treatment"
                     }
                   ]
                 }
               },
               {
                 "url": "statement",
-                "valueString": "Any claim for death, disablement from intentional self-injury unless in self-defense or to save life, suicide or attempted suicide; whilst under the influence of intoxicating liquor or drugs or other intoxicants; arising or resulting from the Insured Person committing any breach of law with criminal intent or willful participation in an illegal act."
+                "valueString": "Any expenses incurred on Domiciliary Hospitalization and OPD treatment."
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
@@ -209,14 +227,14 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Hazardous Activities"
+                      "display": "Treatment outside geographical limits"
                     }
                   ]
                 }
               },
               {
                 "url": "statement",
-                "valueString": "Whilst engaging in aviation or ballooning, or whilst mounting into, or dismounting from or travelling in any balloon or aircraft other than as a passenger in any Scheduled Airlines. Participation as a professional in hazardous or adventure sports, including but not limited to, para-jumping, rock climbing, mountaineering, rafting, motor racing, horse racing or scuba diving, hand gliding, sky diving, deep-sea diving."
+                "valueString": "Treatment taken outside the geographical limits of India."
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
@@ -228,14 +246,147 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Non-Payable Items (Annexure B)"
+                      "display": "War and War-like occurrences"
                     }
                   ]
                 }
               },
               {
                 "url": "statement",
-                "valueString": "All expenses listed in Annexure-B (List I: e.g., Baby Food, Beauty Services, Mineral Water; List II: Items subsumed into Room Charges; List III: Items subsumed into Procedure Charges; List IV: Items subsumed into costs of treatment)."
+                "valueString": "Any claim for death or disablement (whether of a permanent nature or of a temporary nature), hospitalisation of the insured person, directly or indirectly due to War (whether declared or not) and war like occurrence or invasion, acts of foreign enemies, hostilities, civil war, rebellion, revolutions, insurrections, mutiny, military or usurped power, seizure, capture, arrest, restraints and detainment of all kinds."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Intentional self-injury, suicide"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "From intentional self-injury unless in self-defense or to save life, suicide or attempted suicide"
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Under influence of intoxicants"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Whilst under the influence of intoxicating liquor or drugs or other intoxicants except where the insured is not directly responsible for the injury / accident though under influence of intoxication."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Engaging in aviation/ballooning (non-passenger)"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Whilst engaging in aviation or ballooning, or whilst mounting into, or dismounting from or travelling in any balloon or aircraft other than as a passenger (fare-paying or otherwise) in any Scheduled Airlines in the world."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Criminal intent"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "arising or resulting from the Insured Person committing any breach of law with criminal intent."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Hazardous/Adventure sports"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "due to participation as a professional in hazardous or adventure sports, including but not limited to, para-jumping, rock climbing, mountaineering, rafting, motor racing, horse racing or scuba diving, hand gliding, sky diving, deep-sea diving."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Nuclear/Chemical/Biological Terrorism"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Ionizing radiation or contamination by radioactivity from any nuclear fuel or from any nuclear waste from the combustion of nuclear fuel or from any nuclear waste from combustion (including any self-sustaining process of nuclear fission) of nuclear fuel; Nuclear weapons material; The radioactive, toxic, explosive or other hazardous properties of any explosive nuclear assembly or nuclear component thereof; Nuclear, chemical and biological terrorism."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "display": "Illegal Act"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Any loss arising out of the Insured Person's actual or attempted commission of or willful participation in an illegal act or any violation or attempted violation of the law."
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
@@ -245,7 +396,7 @@
           {
             "use": "official",
             "system": "http://code.workz.com",
-            "value": "urn:uuid:f76e9e22-d75d-448a-9128-490ef48264d2"
+            "value": "urn:uuid:c2dcb747-a1fe-4345-a11d-5d50b05574df"
           }
         ],
         "status": "active",
@@ -262,45 +413,20 @@
         ],
         "name": "Saral Suraksha Bima, Aditya Birla Health Insurance Co. Limited",
         "alias": [
-          "Saral Suraksha Bima"
+          "ADIPAIP21628V012021"
         ],
         "ownedBy": {
-          "reference": "urn:uuid:8ca6832b-b138-4035-8463-471e75372578"
-        },
-        "administeredBy": {
-          "reference": "urn:uuid:4eb60039-8294-4035-a91e-1f653fc90d20"
+          "reference": "urn:uuid:3dd3ac4d-de4c-4f15-9f70-988d723bd368"
         },
         "coverageArea": [
           {
-            "display": "Worldwide"
+            "display": "Worldwide (except for optional Hospitalisation expenses due to accident)"
           },
           {
-            "display": "India"
+            "display": "India (for optional Hospitalisation expenses due to accident)"
           }
         ],
         "contact": [
-          {
-            "purpose": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
-                  "code": "Customer Service",
-                  "display": "Customer Service"
-                }
-              ],
-              "text": "Customer Service"
-            },
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "1800 270 7000"
-              },
-              {
-                "system": "email",
-                "value": "care.healthinsurance@adityabirlacapital.com"
-              }
-            ]
-          },
           {
             "purpose": {
               "coding": [
@@ -328,11 +454,11 @@
               "coding": [
                 {
                   "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
-                  "code": "Claims",
-                  "display": "Claims"
+                  "code": "Claims Helpline",
+                  "display": "Claims Helpline"
                 }
               ],
-              "text": "Claims"
+              "text": "Claims Helpline"
             },
             "telecom": [
               {
@@ -344,6 +470,28 @@
                 "value": "care.healthinsurance@adityabirlacapital.com"
               }
             ]
+          },
+          {
+            "purpose": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
+                  "code": "Senior Citizen Support",
+                  "display": "Senior Citizen Support"
+                }
+              ],
+              "text": "Senior Citizen Support"
+            },
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "1800 270 7000"
+              },
+              {
+                "system": "email",
+                "value": "seniorcitizen.abh@adityabirla.com"
+              }
+            ]
           }
         ],
         "coverage": [
@@ -353,7 +501,7 @@
                 "extension": [
                   {
                     "url": "statement",
-                    "valueString": "Due to Injury sustained in an Accident during Policy Period, death occurs within 12 months from Accident date."
+                    "valueString": "due to an Injury sustained in an Accident during the Policy Period, provided that the Insured Person’s death occurs within 12 months from the date of the Accident."
                   }
                 ],
                 "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
@@ -362,7 +510,7 @@
             "type": {
               "coding": [
                 {
-                  "display": "Accidental Death"
+                  "display": "Death Benefit (Accidental)"
                 }
               ]
             },
@@ -371,7 +519,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Benefit Payout"
+                      "display": "Death Benefit"
                     }
                   ]
                 },
@@ -401,7 +549,7 @@
                 "extension": [
                   {
                     "url": "statement",
-                    "valueString": "Solely and directly due to an Accident during Policy Period, occurs within 12 months from Accident date."
+                    "valueString": "solely and directly due to an Accident during the Policy Period, provided that the Permanent Total Disablement occurs within 12 months from the date of the Accident"
                   }
                 ],
                 "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
@@ -410,7 +558,7 @@
             "type": {
               "coding": [
                 {
-                  "display": "Permanent Total Disablement"
+                  "display": "Permanent Total Disablement Benefit (Accidental)"
                 }
               ]
             },
@@ -419,7 +567,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Benefit Payout"
+                      "display": "Permanent Total Disablement Benefit"
                     }
                   ]
                 },
@@ -449,7 +597,7 @@
                 "extension": [
                   {
                     "url": "statement",
-                    "valueString": "Solely and directly due to an Accident during Policy Period, occurs within 12 months from Accident date."
+                    "valueString": "solely and directly due to an Accident during the Policy Period provided that the Permanent Partial Disablement shall occur within 12 months of the date of the Accident"
                   }
                 ],
                 "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
@@ -458,7 +606,7 @@
             "type": {
               "coding": [
                 {
-                  "display": "Permanent Partial Disablement"
+                  "display": "Permanent Partial Disablement Benefit (Accidental)"
                 }
               ]
             },
@@ -467,7 +615,189 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Loss of Use/Physical Separation: One entire hand, one entire foot, loss of sight of one eye"
+                      "display": "Loss of Use/Physical Separation: One entire hand"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 50.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "50 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Use/Physical Separation: One entire foot"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 50.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "50 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Use/Physical Separation: Loss of Sight of one eye"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 50.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "50 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Use/Physical Separation: Loss of toes – all"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 20.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "20 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Use/Physical Separation: Great both phalanges"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 5.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "5 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Use/Physical Separation: Great – one phalanx"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 2.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "2 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Use/Physical Separation: Other than great if more than one toe lost"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 1.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "1 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Use of both ears"
                     }
                   ]
                 },
@@ -519,7 +849,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Loss of Use of both ears"
+                      "display": "Loss of four fingers and thumb of one hand"
                     }
                   ]
                 },
@@ -545,14 +875,14 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Loss of toes – all"
+                      "display": "Loss of four fingers"
                     }
                   ]
                 },
                 "limit": [
                   {
                     "value": {
-                      "value": 20.0,
+                      "value": 35.0,
                       "unit": "% of Sum Insured"
                     },
                     "code": {
@@ -560,7 +890,7 @@
                         {
                           "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
                           "code": "benefit",
-                          "display": "20 % of Sum Insured"
+                          "display": "35 % of Sum Insured"
                         }
                       ]
                     }
@@ -571,14 +901,14 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Loss of four fingers and thumb of one hand"
+                      "display": "Loss of thumb - both phalanges"
                     }
                   ]
                 },
                 "limit": [
                   {
                     "value": {
-                      "value": 50.0,
+                      "value": 25.0,
                       "unit": "% of Sum Insured"
                     },
                     "code": {
@@ -586,7 +916,7 @@
                         {
                           "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
                           "code": "benefit",
-                          "display": "50 % of Sum Insured"
+                          "display": "25 % of Sum Insured"
                         }
                       ]
                     }
@@ -597,69 +927,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Any other permanent partial disablement"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          {
-            "extension": [
-              {
-                "extension": [
-                  {
-                    "url": "statement",
-                    "valueString": "Injury in an Accident during Policy Period, completely incapacitates from employment, period exceeds 4 consecutive weeks, certified within 30 days of Accident. Max 100 weeks."
-                  }
-                ],
-                "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
-              }
-            ],
-            "type": {
-              "coding": [
-                {
-                  "display": "Temporary Total Disablement (Optional)"
-                }
-              ]
-            },
-            "benefit": [
-              {
-                "type": {
-                  "coding": [
-                    {
-                      "display": "Benefit Payout"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          {
-            "extension": [
-              {
-                "extension": [
-                  {
-                    "url": "statement",
-                    "valueString": "Medical expenses incurred for hospitalization arising due to accident during the policy period, for a minimum period of 24 hours, except for specified day care treatments."
-                  }
-                ],
-                "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
-              }
-            ],
-            "type": {
-              "coding": [
-                {
-                  "display": "Hospitalisation Expenses due to Accident (Optional)"
-                }
-              ]
-            },
-            "benefit": [
-              {
-                "type": {
-                  "coding": [
-                    {
-                      "display": "Overall Hospitalization Expenses"
+                      "display": "Loss of thumb - one phalanx"
                     }
                   ]
                 },
@@ -667,14 +935,466 @@
                   {
                     "value": {
                       "value": 10.0,
-                      "unit": "% of Base Sum Insured"
+                      "unit": "% of Sum Insured"
                     },
                     "code": {
                       "coding": [
                         {
                           "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
                           "code": "benefit",
-                          "display": "10 % of Base Sum Insured"
+                          "display": "10 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Index finger - three phalanges"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 10.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "10 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Index finger - two phalanges"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 8.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "8 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of Index finger - one phalanx"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 4.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "4 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of middle finger - three phalanges"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 6.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "6 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of middle finger - two phalanges"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 4.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "4 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of middle finger - one phalanx"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 2.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "2 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of ring finger - three phalanges"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 5.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "5 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of ring finger - two phalanges"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 4.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "4 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of ring finger - one phalanx"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 2.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "2 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of little finger - three phalanges"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 4.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "4 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of little finger - two phalanges"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 3.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "3 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of little finger - one phalanx"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 2.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "2 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of metacarpus - first or second (additional)"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 3.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "3 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Loss of metacarpus - third, fourth or fifth (additional)"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 2.0,
+                      "unit": "% of Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "2 % of Sum Insured"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Any other permanent partial disablement Percentage"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "statement",
+                    "valueString": "Injury in an Accident during the Policy Period and which completely incapacitates the Insured Person from engaging in any employment or occupation... for not more than 100 weeks... commencing within 30 days from date of accident."
+                  }
+                ],
+                "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
+              }
+            ],
+            "type": {
+              "coding": [
+                {
+                  "display": "Temporary Total Disablement Benefit (Accidental)"
+                }
+              ]
+            },
+            "benefit": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Temporary Total Disablement Benefit"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "statement",
+                    "valueString": "indemnify medical expenses incurred for hospitalisation arising due to accident during the policy period"
+                  }
+                ],
+                "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
+              }
+            ],
+            "type": {
+              "coding": [
+                {
+                  "display": "Hospitalisation Expenses due to Accident"
+                }
+              ]
+            },
+            "benefit": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Overall Hospitalisation Expenses"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 10.0,
+                      "unit": "% of base Sum Insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "10 % of base Sum Insured"
                         }
                       ]
                     }
@@ -705,7 +1425,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, diagnostics"
+                      "display": "Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities, and such other similar expenses"
                     }
                   ]
                 }
@@ -714,6 +1434,8 @@
                 "type": {
                   "coding": [
                     {
+                      "system": "http://snomed.info/sct",
+                      "code": "118228000",
                       "display": "Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses"
                     }
                   ]
@@ -741,7 +1463,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Dental treatment (necessitated due to injury)"
+                      "display": "Dental treatment"
                     }
                   ]
                 }
@@ -750,7 +1472,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Plastic surgery (necessitated due to injury)"
+                      "display": "Plastic surgery"
                     }
                   ]
                 }
@@ -759,7 +1481,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "All day care treatments (necessitated due to injury)"
+                      "display": "All day care treatments"
                     }
                   ]
                 }
@@ -778,14 +1500,14 @@
                   {
                     "value": {
                       "value": 2000.0,
-                      "unit": "INR per hospitalization"
+                      "unit": "INR"
                     },
                     "code": {
                       "coding": [
                         {
                           "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
                           "code": "benefit",
-                          "display": "2000 INR per hospitalization"
+                          "display": "2000 INR"
                         }
                       ]
                     }
@@ -800,7 +1522,7 @@
                 "extension": [
                   {
                     "url": "statement",
-                    "valueString": "Following admissible claim of Death or Permanent Total Disability of insured, per dependent child pursuing full time education, age up to 25 years."
+                    "valueString": "Following an admissible claim of the insured person under the policy towards Death or Permanent Total Disability of the insured person"
                   }
                 ],
                 "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
@@ -809,7 +1531,7 @@
             "type": {
               "coding": [
                 {
-                  "display": "Education Grant (Optional)"
+                  "display": "Education Grant (Accidental Death/PTD)"
                 }
               ]
             },
@@ -818,7 +1540,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "One-time grant per child"
+                      "display": "Education Grant"
                     }
                   ]
                 },
@@ -826,14 +1548,62 @@
                   {
                     "value": {
                       "value": 10.0,
-                      "unit": "% of Base Sum Insured"
+                      "unit": "% of Base Sum Insured per child"
                     },
                     "code": {
                       "coding": [
                         {
                           "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
                           "code": "benefit",
-                          "display": "10 % of Base Sum Insured"
+                          "display": "10 % of Base Sum Insured per child"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "extension": [
+                  {
+                    "url": "statement",
+                    "valueString": "in respect of each claim free policy year, provided the policy is renewed without a break"
+                  }
+                ],
+                "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Condition"
+              }
+            ],
+            "type": {
+              "coding": [
+                {
+                  "display": "Cumulative Bonus"
+                }
+              ]
+            },
+            "benefit": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "display": "Increase in Sum Insured"
+                    }
+                  ]
+                },
+                "limit": [
+                  {
+                    "value": {
+                      "value": 5.0,
+                      "unit": "% per claim free year, max 50% of sum insured"
+                    },
+                    "code": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/benefit-unit",
+                          "code": "benefit",
+                          "display": "5 % per claim free year, max 50% of sum insured"
                         }
                       ]
                     }
@@ -849,7 +1619,7 @@
               {
                 "use": "official",
                 "system": "http://code.workz.com",
-                "value": "urn:uuid:f636740a-b749-4aa8-b0a1-a39d4e795b28"
+                "value": "urn:uuid:762ec6e9-92ea-4a3c-8966-5ff013d3d54f"
               }
             ],
             "type": {
@@ -862,53 +1632,6 @@
               ]
             },
             "specificCost": [
-              {
-                "category": {
-                  "coding": [
-                    {
-                      "code": "Unknown",
-                      "display": "Hospitalisation Expenses due to Accident"
-                    }
-                  ]
-                },
-                "benefit": [
-                  {
-                    "type": {
-                      "coding": [
-                        {
-                          "code": "Unknown",
-                          "display": "Indemnified medical expenses"
-                        }
-                      ]
-                    },
-                    "cost": [
-                      {
-                        "type": {
-                          "coding": [
-                            {
-                              "system": "http://terminology.hl7.org/CodeSystem/benefit-cost-type",
-                              "code": "fullcoverage"
-                            }
-                          ]
-                        },
-                        "applicability": {
-                          "coding": [
-                            {
-                              "system": "http://hl7.org/fhir/ValueSet/insuranceplan-applicability",
-                              "code": "in-network",
-                              "display": "In Network"
-                            }
-                          ]
-                        },
-                        "value": {
-                          "value": 10.0,
-                          "unit": "% of Base Sum Insured"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
               {
                 "category": {
                   "coding": [
@@ -957,6 +1680,44 @@
                     ]
                   }
                 ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3dd3ac4d-de4c-4f15-9f70-988d723bd368",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "3dd3ac4d-de4c-4f15-9f70-988d723bd368",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "https://www.irdai.gov.in/identifier/insurer",
+            "value": "urn:uuid:2c731e67-d050-4363-b77f-219db8854c2a"
+          }
+        ],
+        "name": "Aditya Birla Health Insurance Co. Limited",
+        "contact": [
+          {
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "1800 270 7000"
+              },
+              {
+                "system": "email",
+                "value": "care.healthinsurance@adityabirlacapital.com"
+              },
+              {
+                "system": "url",
+                "value": "https://www.adityabirlacapital.com/healthinsurance"
               }
             ]
           }

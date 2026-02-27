@@ -1,73 +1,15 @@
 {
   "resourceType": "Bundle",
-  "id": "d362b721-b624-4a8c-9a41-0afc1ef99bfa",
+  "id": "ae6c684f-2471-46a9-860b-b406b100cd5b",
   "language": "en-IN",
   "type": "collection",
-  "timestamp": "2026-02-27T09:33:12.704460Z",
+  "timestamp": "2026-02-27T22:08:41.462319Z",
   "entry": [
     {
-      "fullUrl": "urn:uuid:54554e3c-7235-4366-a239-62d6b56e6199",
-      "resource": {
-        "resourceType": "Organization",
-        "id": "54554e3c-7235-4366-a239-62d6b56e6199",
-        "meta": {
-          "profile": [
-            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
-          ]
-        },
-        "identifier": [
-          {
-            "use": "official",
-            "system": "https://www.irdai.gov.in/identifier/insurer",
-            "value": "urn:uuid:4dce1413-d70b-4bd6-acab-d7a18948dd24"
-          }
-        ],
-        "name": "Edelweiss General Insurance Company Limited",
-        "contact": [
-          {
-            "telecom": [
-              {
-                "system": "phone",
-                "value": "180012000"
-              },
-              {
-                "system": "email",
-                "value": "support@edelweissinsurance.com"
-              },
-              {
-                "system": "url",
-                "value": "www.edelweissinsurance.com"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:ea28a5ac-7409-4737-9c48-45abb0c89f2d",
-      "resource": {
-        "resourceType": "Organization",
-        "id": "ea28a5ac-7409-4737-9c48-45abb0c89f2d",
-        "meta": {
-          "profile": [
-            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
-          ]
-        },
-        "identifier": [
-          {
-            "use": "official",
-            "system": "https://www.irdai.gov.in/identifier/tpa",
-            "value": "urn:uuid:3d9c366b-1dcf-402c-87cf-7ca55fd39b68"
-          }
-        ],
-        "name": "Unknown"
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:02876dc6-fad5-46f4-8774-8e14884d43fd",
+      "fullUrl": "urn:uuid:964d2c25-2b47-44da-a67d-85d078f00601",
       "resource": {
         "resourceType": "InsurancePlan",
-        "id": "02876dc6-fad5-46f4-8774-8e14884d43fd",
+        "id": "964d2c25-2b47-44da-a67d-85d078f00601",
         "meta": {
           "profile": [
             "https://nrces.in/ndhm/fhir/r4/StructureDefinition/InsurancePlan"
@@ -97,8 +39,7 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "code": "PAS",
-                      "display": "Passport"
+                      "display": "Copy of Insured Person's passport (All pages)"
                     }
                   ]
                 }
@@ -124,7 +65,7 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Photo Identity proof"
+                      "display": "Photo Identity proof of the patient"
                     }
                   ]
                 }
@@ -151,7 +92,7 @@
                   "coding": [
                     {
                       "code": "KYC",
-                      "display": "KYC (Identity proof with Address)"
+                      "display": "KYC (Identity proof with Address) of the proposer"
                     }
                   ]
                 }
@@ -178,7 +119,7 @@
                   "coding": [
                     {
                       "code": "KYC",
-                      "display": "KYC (Identity proof with Address)"
+                      "display": "KYC (Identity proof with Address) of the proposer"
                     }
                   ]
                 }
@@ -193,7 +134,46 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "code": "Excl04",
+                      "code": "Excl02",
+                      "display": "Waiting Period"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "The Company shall not be liable for any claim arising for COVID within 15 days from the first policy commencement date."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "Excl01",
+                      "display": "Pre-Existing Diseases"
+                    }
+                  ]
+                }
+              },
+              {
+                "url": "statement",
+                "valueString": "Any claim with respect to COVID manifested prior to commencement date of this policy or during the waiting period."
+              }
+            ],
+            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
+          },
+          {
+            "extension": [
+              {
+                "url": "category",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
                       "display": "Investigation & Evaluation"
                     }
                   ]
@@ -213,8 +193,7 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "code": "Excl04",
-                      "display": "Investigation & Evaluation"
+                      "display": "Diagnostic Expenses"
                     }
                   ]
                 }
@@ -233,7 +212,7 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Diagnosis Not Related to COVID"
+                      "display": "Diagnosis not related to COVID"
                     }
                   ]
                 }
@@ -252,7 +231,7 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
-                      "display": "Unauthorized Diagnostic Centre"
+                      "display": "Unauthorized Testing"
                     }
                   ]
                 }
@@ -260,26 +239,6 @@
               {
                 "url": "statement",
                 "valueString": "Testing done at a Diagnostic centre which is not authorized by the Government shall not be recognized under this Policy."
-              }
-            ],
-            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
-          },
-          {
-            "extension": [
-              {
-                "url": "category",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "Excl02",
-                      "display": "Waiting Period"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "statement",
-                "valueString": "Any claim with respect to COVID manifested prior to commencement date of this policy or during the waiting period."
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
@@ -302,33 +261,13 @@
               }
             ],
             "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
-          },
-          {
-            "extension": [
-              {
-                "url": "category",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "Excl02",
-                      "display": "Waiting Period"
-                    }
-                  ]
-                }
-              },
-              {
-                "url": "statement",
-                "valueString": "The Company shall not be liable for any claim arising for COVID within 15 days from the first policy commencement date."
-              }
-            ],
-            "url": "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Claim-Exclusion"
           }
         ],
         "identifier": [
           {
             "use": "official",
             "system": "http://code.workz.com",
-            "value": "urn:uuid:02268860-d450-4ec1-911c-9407938b08c3"
+            "value": "urn:uuid:4d5fcf58-601a-457f-9e10-b9acb930e2c2"
           }
         ],
         "status": "active",
@@ -346,10 +285,7 @@
         "name": "Corona Rakshak Policy",
         "alias": [],
         "ownedBy": {
-          "reference": "urn:uuid:54554e3c-7235-4366-a239-62d6b56e6199"
-        },
-        "administeredBy": {
-          "reference": "urn:uuid:ea28a5ac-7409-4737-9c48-45abb0c89f2d"
+          "reference": "urn:uuid:369b429e-a67a-49b9-9357-cc28dc60423e"
         },
         "coverageArea": [
           {
@@ -398,7 +334,7 @@
             "telecom": [
               {
                 "system": "phone",
-                "value": "1800120216216"
+                "value": "1800120216216 / 180012000"
               },
               {
                 "system": "email",
@@ -417,7 +353,16 @@
               ],
               "text": "Grievance Redressal Officer"
             },
+            "name": [
+              {
+                "text": "Company’s Grievance Redressal Officer"
+              }
+            ],
             "telecom": [
+              {
+                "system": "phone",
+                "value": "+91 22 4931 4422"
+              },
               {
                 "system": "email",
                 "value": "grievanceofficer@edelweissinsurance.com"
@@ -437,7 +382,7 @@
             },
             "name": [
               {
-                "text": "IGCC"
+                "text": "IRDAI Grievance Call Centre (IGCC)"
               }
             ],
             "telecom": [
@@ -470,7 +415,7 @@
             "telecom": [
               {
                 "system": "phone",
-                "value": "022-26106245"
+                "value": "022-26106245/889/671"
               },
               {
                 "system": "email",
@@ -504,7 +449,7 @@
                 "type": {
                   "coding": [
                     {
-                      "display": "Lump Sum COVID Hospitalization Benefit"
+                      "display": "Lump sum benefit for COVID hospitalization"
                     }
                   ]
                 },
@@ -535,7 +480,7 @@
               {
                 "use": "official",
                 "system": "http://code.workz.com",
-                "value": "urn:uuid:1ce2c20a-f186-4a7a-94ba-7a6330535f8a"
+                "value": "urn:uuid:0daa2175-67a3-4da7-bf66-bc905d4688cf"
               }
             ],
             "type": {
@@ -547,6 +492,44 @@
                 }
               ]
             }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:369b429e-a67a-49b9-9357-cc28dc60423e",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "369b429e-a67a-49b9-9357-cc28dc60423e",
+        "meta": {
+          "profile": [
+            "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "https://www.irdai.gov.in/identifier/insurer",
+            "value": "urn:uuid:bfc20e6d-5214-4c93-a1e0-8dfa6f010801"
+          }
+        ],
+        "name": "Edelweiss General Insurance Company Ltd",
+        "contact": [
+          {
+            "telecom": [
+              {
+                "system": "phone",
+                "value": "1800120216216 / 180012000"
+              },
+              {
+                "system": "email",
+                "value": "support@edelweissinsurance.com"
+              },
+              {
+                "system": "url",
+                "value": "www.edelweissinsurance.com"
+              }
+            ]
           }
         ]
       }
